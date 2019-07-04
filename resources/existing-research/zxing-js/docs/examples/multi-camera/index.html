@@ -8,7 +8,34 @@
     <title>ZXing Javascript Scanner</title>
 </head>
 
+<style>
+    div.overlay {
+        --baseline: 12px;
+        position: fixed;
+        display: block;
+        top: 20%;
+        left: 50%;
+        height: fit-content;
+        min-width: 160px;
+        padding: var(--baseline) calc(var(--baseline) * 2);
+        background: white;
+        border-radius: 20px;
+        color: black;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        z-index: 2;
+    }
+</style>
+
 <body>
+
+<div class="overlay">
+    <span>
+        Current FPS:
+    </span>
+</div>
 
 <main class="wrapper" style="padding-top:2em">
     <section class="container" id="demo-content">
@@ -49,9 +76,9 @@
   refreshLoop();
 
   logFps = () => {
-    console.log('fps: ', fps);
+    let fpsStr = 'Current FPS: ' + fps.toString();
+    document.querySelector('body > div').innerHTML = fpsStr;
   };
-
   window.onload = () => {
     setInterval(logFps, 1000);
   };

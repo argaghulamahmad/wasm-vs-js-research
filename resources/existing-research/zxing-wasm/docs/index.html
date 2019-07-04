@@ -1,135 +1,163 @@
 <html>
 
 <head>
-  <meta charset="UTF-8" />
-  <title>Zxing WASM Scanner</title>
+    <meta charset="UTF-8"/>
+    <title>Zxing WASM Scanner</title>
 
-  <style>
-    video {
-      position: fixed;
-      right: 0;
-      bottom: 0;
-      min-width: 100%;
-      min-height: 100%;
-    }
+    <style>
+        video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+        }
 
-    img {
-      display: none;
-    }
+        img {
+            display: none;
+        }
 
-    main {
-      margin: 0 auto;
-      max-width: 600px;
-    }
+        main {
+            margin: 0 auto;
+            max-width: 600px;
+        }
 
-    canvas {
-      max-width: 100%;
-      display: none;
-    }
-  </style>
-  <script src="./zxing-wasm.js"></script>
+        canvas {
+            max-width: 100%;
+            display: none;
+        }
+
+        div.overlay {
+            --baseline: 12px;
+            position: fixed;
+            display: block;
+            top: 20%;
+            left: 50%;
+            height: fit-content;
+            min-width: 160px;
+            padding: var(--baseline) calc(var(--baseline) * 2);
+            background: white;
+            border-radius: 20px;
+            color: black;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10px;
+            z-index: 2;
+        }
+    </style>
+    <script src="./zxing-wasm.js"></script>
 </head>
 
 <body>
-  <main>
+<div class="overlay">
+    <span>
+        Current FPS:
+    </span>
+</div>
+<main>
     <canvas width="400" height="300"></canvas>
     <img crossorigin="anonymous" alt="">
     <video autoplay></video>
-  </main>
+</main>
 
-  <script>
-    const zxing = window["zxing-wasm"];
-    const video = document.querySelector("video")
-    const img = document.querySelector("img")
-    const canvas = document.querySelector("canvas");
-    const ctx = canvas.getContext("2d");
-    let W = 0;
-    let H = 0;
-    let buf;
+<script>
+  const zxing = window['zxing-wasm'];
+  const video = document.querySelector('video');
+  const img = document.querySelector('img');
+  const canvas = document.querySelector('canvas');
+  const ctx = canvas.getContext('2d');
+  let W = 0;
+  let H = 0;
+  let buf;
 
-    function toGrayScale(frame) {
-      // A frame has four channels: red, green, blue, alpha
-      // Represented in the array as RGBARGBARGBA
-      let j = 0;
-      for (let i = 0; i < frame.length; i++) {
-        if (i % 4 === 0) {
-          buf[j] = (frame[i] + frame[i + 1] + frame[i + 2]) / 3;
-          j++;
-        }
+  function toGrayScale(frame) {
+    // A frame has four channels: red, green, blue, alpha
+    // Represented in the array as RGBARGBARGBA
+    let j = 0;
+    for (let i = 0; i < frame.length; i++) {
+      if (i % 4 === 0) {
+        buf[j] = (frame[i] + frame[i + 1] + frame[i + 2]) / 3;
+        j++;
       }
-      return buf;
     }
+    return buf;
+  }
 
-    function paintAndDetect(src, singlePass = true) {
-      ctx.drawImage(src, 0, 0, W, H);
-      const frame = ctx.getImageData(0, 0, W, H);
-      var t0 = performance.now();
-      zxing.read(toGrayScale(frame.data), frame.width, frame.height)
-        .then(result => {
-          var t1 = performance.now();
-          var dt = t1 - t0;
-          if (result !== "") {
-            alert('wasm scanner: ' + result + ', dt:  ' + dt);
-          }
-          if (!singlePass) {
-            setTimeout(() => paintAndDetect(src, false), 0)
-          }
-        })
-    }
-
-    function initBuf(w, h) {
-      W = w;
-      H = h;
-      canvas.width = W;
-      canvas.height = H;
-      buf = new Uint8Array(new Array(W * H).fill(0).map(_ => 0))
-    }
-
-    img.addEventListener("load", () => {
-      initBuf(img.width, img.height)
-      paintAndDetect(img)
-    });
-
-    window.addEventListener('load', () => {
-      canvas.style='transform: scale(-1, 1);';
-      // // Code to run detection via webcam
-      window.navigator.mediaDevices.getUserMedia({ video: true }).then(mediaStream => {
-        video.srcObject = mediaStream;
-
-        video.onloadedmetadata = () => {
-          initBuf(video.videoWidth, video.videoHeight);
-          setTimeout(() => paintAndDetect(video, false), 0)
+  function paintAndDetect(src, singlePass = true) {
+    ctx.drawImage(src, 0, 0, W, H);
+    const frame = ctx.getImageData(0, 0, W, H);
+    var t0 = performance.now();
+    zxing.read(toGrayScale(frame.data), frame.width, frame.height)
+      .then(result => {
+        var t1 = performance.now();
+        var dt = t1 - t0;
+        if (result !== '') {
+          alert('wasm scanner: ' + result + ', dt:  ' + dt);
         }
-
-      })
-        .catch(e => { video.stop(); alert(e); });
-    })
-
-    const times = [];
-    let fps;
-
-    function refreshLoop() {
-      window.requestAnimationFrame(() => {
-        const now = performance.now();
-        while (times.length > 0 && times[0] <= now - 1000) {
-          times.shift();
+        if (!singlePass) {
+          setTimeout(() => paintAndDetect(src, false), 0);
         }
-        times.push(now);
-        fps = times.length;
-        refreshLoop();
       });
-    }
+  }
 
-    refreshLoop();
+  function initBuf(w, h) {
+    W = w;
+    H = h;
+    canvas.width = W;
+    canvas.height = H;
+    buf = new Uint8Array(new Array(W * H).fill(0).map(_ => 0));
+  }
 
-    logFps = () => {
-      console.log('fps: ', fps);
-    };
+  img.addEventListener('load', () => {
+    initBuf(img.width, img.height);
+    paintAndDetect(img);
+  });
 
-    window.onload = () => {
-      setInterval(logFps, 1000);
-    };
-  </script>
+  window.addEventListener('load', () => {
+    canvas.style = 'transform: scale(-1, 1);';
+    // // Code to run detection via webcam
+    window.navigator.mediaDevices.getUserMedia({ video: true }).then(mediaStream => {
+      video.srcObject = mediaStream;
+
+      video.onloadedmetadata = () => {
+        initBuf(video.videoWidth, video.videoHeight);
+        setTimeout(() => paintAndDetect(video, false), 0);
+      };
+
+    })
+      .catch(e => {
+        video.stop();
+        alert(e);
+      });
+  });
+
+  const times = [];
+  let fps;
+
+  function refreshLoop() {
+    window.requestAnimationFrame(() => {
+      const now = performance.now();
+      while (times.length > 0 && times[0] <= now - 1000) {
+        times.shift();
+      }
+      times.push(now);
+      fps = times.length;
+      refreshLoop();
+    });
+  }
+
+  refreshLoop();
+
+  logFps = () => {
+    let fpsStr = 'Current FPS: ' + fps.toString();
+    document.querySelector('body > div').innerHTML = fpsStr;
+  };
+
+  window.onload = () => {
+    setInterval(logFps, 1000);
+  };
+</script>
 </body>
 
 </html>
