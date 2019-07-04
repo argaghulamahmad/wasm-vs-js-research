@@ -4,6 +4,7 @@
     <list default="true" id="9ac03880-5d42-4110-b648-874d3370c04f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/existing-research/zxing-js/docs/examples/multi-camera/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/existing-research/zxing-js/docs/examples/multi-camera/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/existing-research/zxing-wasm/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/existing-research/zxing-wasm/docs/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-js/docs/examples/multi-camera/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="154" column="8" lean-forward="true" selection-start-line="154" selection-start-column="8" selection-end-line="154" selection-end-column="8" />
+            <state relative-caret-position="196">
+              <caret line="158" column="81" lean-forward="true" selection-start-line="158" selection-start-column="81" selection-end-line="158" selection-end-column="81" />
               <folding>
                 <element signature="n#style#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#video#0;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -32,8 +33,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-wasm/docs/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="150" column="12" selection-start-line="150" selection-start-column="12" selection-end-line="150" selection-end-column="12" />
+            <state relative-caret-position="137">
+              <caret line="151" column="71" lean-forward="true" selection-start-line="151" selection-end-line="152" />
             </state>
           </provider>
         </entry>
@@ -66,9 +67,9 @@
       <find>fps</find>
       <find>div</find>
       <find>result</find>
-      <find>alert</find>
       <find>consol</find>
       <find>console.log</find>
+      <find>alert</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -86,8 +87,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/demo/js-scanner/index.html" />
         <option value="$PROJECT_DIR$/demo/wasm-scanner/index.html" />
-        <option value="$PROJECT_DIR$/resources/existing-research/zxing-wasm/docs/index.html" />
         <option value="$PROJECT_DIR$/resources/existing-research/zxing-js/src/browser/BrowserCodeReader.ts" />
+        <option value="$PROJECT_DIR$/resources/existing-research/zxing-wasm/docs/index.html" />
         <option value="$PROJECT_DIR$/resources/existing-research/zxing-js/docs/examples/multi-camera/index.html" />
       </list>
     </option>
@@ -291,17 +292,24 @@
       <option name="project" value="LOCAL" />
       <updated>1562229080995</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Remove unused console.log">
+      <created>1562229416941</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1562229416941</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14306000" />
+    <option name="totallyTimeSpent" value="14625000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22598253" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22598253" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="0" />
@@ -314,8 +322,8 @@
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="GraphQL" order="9" />
-      <window_info anchor="bottom" id="Version Control" order="10" visible="true" weight="0.3299285" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3299285" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3299285" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3299285" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -373,7 +381,8 @@
     <MESSAGE value="Set video as background" />
     <MESSAGE value="Add overlay to both scanner" />
     <MESSAGE value="Add dt as param on result typescript code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add dt as param on result typescript code" />
+    <MESSAGE value="Remove unused console.log" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove unused console.log" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/resources/existing-research/instascan/export.js">
@@ -545,15 +554,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-wasm/docs/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="150" column="12" selection-start-line="150" selection-start-column="12" selection-end-line="150" selection-end-column="12" />
+        <state relative-caret-position="137">
+          <caret line="151" column="71" lean-forward="true" selection-start-line="151" selection-end-line="152" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-js/docs/examples/multi-camera/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="154" column="8" lean-forward="true" selection-start-line="154" selection-start-column="8" selection-end-line="154" selection-end-column="8" />
+        <state relative-caret-position="196">
+          <caret line="158" column="81" lean-forward="true" selection-start-line="158" selection-start-column="81" selection-end-line="158" selection-end-column="81" />
           <folding>
             <element signature="n#style#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#video#0;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />

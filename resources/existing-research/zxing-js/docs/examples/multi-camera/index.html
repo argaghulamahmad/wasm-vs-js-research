@@ -28,6 +28,25 @@
         z-index: 3;
     }
 
+    div.overlay-result {
+        --baseline: 12px;
+        position: fixed;
+        display: block;
+        bottom: 20%;
+        left: 50%;
+        height: fit-content;
+        min-width: 160px;
+        padding: var(--baseline) calc(var(--baseline) * 2);
+        background: white;
+        border-radius: 20px;
+        color: black;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        z-index: 3;
+    }
+
     div.square {
         position: fixed;
         display: block;
@@ -62,6 +81,10 @@
     <span>
         Current FPS:
     </span>
+</div>
+
+<div class="overlay-result">
+    Empty
 </div>
 
 <main class="wrapper" style="padding-top:2em">
@@ -140,7 +163,8 @@
         const start = () => {
           codeReader.decodeFromInputVideoDeviceContinuously(selectedDeviceId, 'video', (result, err) => {
             if (result) {
-              alert('js scanner: ' + result + ', time to decode:  ' + result.dt);
+              resultStr = 'js scanner: ' + result + ', time to decode:  ' + result.dt;
+              document.querySelector("body > div.overlay-result").innerHTML = resultStr;
             }
             if (err && !(err instanceof ZXing.NotFoundException)) {
               console.error(err);
