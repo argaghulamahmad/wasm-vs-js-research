@@ -2,101 +2,106 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>ZXing Javascript Scanner</title>
+    <title>ZXing Javascript Scanner</title>
 </head>
 
 <body>
 
-  <main class="wrapper" style="padding-top:2em">
-
+<main class="wrapper" style="padding-top:2em">
     <section class="container" id="demo-content">
-      <div>
-        <video id="video" width="300" height="200" style="border: 1px solid gray"></video>
-      </div>
+        <div>
+            <video id="video" style="
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;">
+            </video>
+        </div>
 
-      <div id="sourceSelectPanel" style="display:none">
-        <select id="sourceSelect" style="max-width:400px; visibility: hidden">
-        </select>
-      </div>
+        <div id="sourceSelectPanel" style="display:none">
+            <select id="sourceSelect" style="max-width:400px; visibility: hidden">
+            </select>
+        </div>
     </section>
-  </main>
+</main>
 
-  <script type="text/javascript" src="../../../umd/index.min.js"></script>
-  <script type="text/javascript">
-    const times = [];
-    let fps;
+<script type="text/javascript" src="../../../umd/index.min.js"></script>
+<script type="text/javascript">
+  const times = [];
+  let fps;
 
-    function refreshLoop() {
-      window.requestAnimationFrame(() => {
-        const now = performance.now();
-        while (times.length > 0 && times[0] <= now - 1000) {
-          times.shift();
-        }
-        times.push(now);
-        fps = times.length;
-        refreshLoop();
-      });
-    }
+  function refreshLoop() {
+    window.requestAnimationFrame(() => {
+      const now = performance.now();
+      while (times.length > 0 && times[0] <= now - 1000) {
+        times.shift();
+      }
+      times.push(now);
+      fps = times.length;
+      refreshLoop();
+    });
+  }
 
-    refreshLoop();
+  refreshLoop();
 
-    logFps = () => {
-      console.log('fps: ', fps);
-    };
+  logFps = () => {
+    console.log('fps: ', fps);
+  };
 
-    window.onload = () => {
-      setInterval(logFps, 1000);
-    };
+  window.onload = () => {
+    setInterval(logFps, 1000);
+  };
 
-    window.addEventListener('load', function () {
-      let selectedDeviceId;
-      const codeReader = new ZXing.BrowserMultiFormatReader()
-      console.log('ZXing code reader initialized')
-      codeReader.getVideoInputDevices()
-        .then((videoInputDevices) => {
-          const sourceSelect = document.getElementById('sourceSelect')
-          selectedDeviceId = videoInputDevices[0].deviceId
-          if (videoInputDevices.length >= 1) {
-            videoInputDevices.forEach((element) => {
-              const sourceOption = document.createElement('option')
-              sourceOption.text = element.label
-              sourceOption.value = element.deviceId
-              sourceSelect.appendChild(sourceOption)
-            })
+  window.addEventListener('load', function() {
+    let selectedDeviceId;
+    const codeReader = new ZXing.BrowserMultiFormatReader();
+    console.log('ZXing code reader initialized');
+    codeReader.getVideoInputDevices()
+      .then((videoInputDevices) => {
+        const sourceSelect = document.getElementById('sourceSelect');
+        selectedDeviceId = videoInputDevices[0].deviceId;
+        if (videoInputDevices.length >= 1) {
+          videoInputDevices.forEach((element) => {
+            const sourceOption = document.createElement('option');
+            sourceOption.text = element.label;
+            sourceOption.value = element.deviceId;
+            sourceSelect.appendChild(sourceOption);
+          });
 
-            sourceSelect.onchange = () => {
-              selectedDeviceId = sourceSelect.value;
-            };
-
-            const sourceSelectPanel = document.getElementById('sourceSelectPanel')
-            sourceSelectPanel.style.display = 'block'
-          }
-
-          const start = () => {
-            codeReader.decodeFromInputVideoDeviceContinuously(selectedDeviceId, 'video', (result, err) => {
-              if (result) {
-                console.log(result);
-              }
-              if (err && !(err instanceof ZXing.NotFoundException)) {
-                console.error(err)
-                document.getElementById('result').textContent = err
-              }
-            })
-            console.log(`Started continous decode from camera with id ${selectedDeviceId}`)
+          sourceSelect.onchange = () => {
+            selectedDeviceId = sourceSelect.value;
           };
 
-          window.onload(
-            start()
-        )
-        })
-        .catch((err) => {
-          console.error(err)
-        })
-    })
-  </script>
+          const sourceSelectPanel = document.getElementById('sourceSelectPanel');
+          sourceSelectPanel.style.display = 'block';
+        }
+
+        const start = () => {
+          codeReader.decodeFromInputVideoDeviceContinuously(selectedDeviceId, 'video', (result, err) => {
+            if (result) {
+              console.log(result);
+            }
+            if (err && !(err instanceof ZXing.NotFoundException)) {
+              console.error(err);
+              document.getElementById('result').textContent = err;
+            }
+          });
+          console.log(`Started continous decode from camera with id ${selectedDeviceId}`);
+        };
+
+        window.onload(
+          start()
+        );
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  });
+</script>
 
 </body>
 
