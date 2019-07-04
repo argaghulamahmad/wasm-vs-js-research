@@ -1,0 +1,124 @@
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>zxing-wasm Demo</title>
+  <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+  <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+
+  <style>
+    video {
+      display: none;
+    }
+
+    img {
+      display: none;
+    }
+
+    main {
+      margin: 0 auto;
+      max-width: 600px;
+    }
+
+    canvas {
+      max-width: 100%;
+    }
+  </style>
+  <script src="./zxing-wasm.js"></script>
+</head>
+
+<body>
+  <main>
+    <h1>zxing-wasm Demo</h1>
+    <p>Choose a picture with or without QR code:</p>
+    <input type="file" accept="image/*">
+    <button>Start webcam instead</button>
+    <div></div>
+    <canvas width="400" height="300"></canvas>
+    <img crossorigin="anonymous" alt="">
+    <video autoplay></video>
+  </main>
+
+  <script>
+    const zxing = window["zxing-wasm"];
+    const btn = document.querySelector('button')
+    const div = document.querySelector("div")
+    const file = document.querySelector("input")
+    const video = document.querySelector("video")
+    const img = document.querySelector("img")
+    const canvas = document.querySelector("canvas");
+    const ctx = canvas.getContext("2d");
+    let W = 0;
+    let H = 0;
+    let buf;
+
+
+    file.addEventListener("change", e => {
+      const f = e.target.files[0]
+      var reader = new FileReader();
+      reader.onload = e2 => img.src = e2.target.result;
+      reader.readAsDataURL(f);
+    });
+
+
+    function toGrayScale(frame) {
+      // A frame has four channels: red, green, blue, alpha
+      // Represented in the array as RGBARGBARGBA
+      let j = 0;
+      for (let i = 0; i < frame.length; i++) {
+        if (i % 4 === 0) {
+          buf[j] = (frame[i] + frame[i + 1] + frame[i + 2]) / 3;
+          j++;
+        }
+      }
+      return buf;
+    }
+
+    function paintAndDetect(src, singlePass = true) {
+      ctx.drawImage(src, 0, 0, W, H);
+      const frame = ctx.getImageData(0, 0, W, H);
+      zxing.read(toGrayScale(frame.data), frame.width, frame.height)
+        .then(result => {
+          if (result === "") {
+            div.textContent = "[Nothing detected]"
+          } else {
+            div.textContent = result
+          }
+          if (!singlePass) {
+            setTimeout(() => paintAndDetect(src, false), 0)
+          }
+        })
+    }
+
+    function initBuf(w, h) {
+      W = w;
+      H = h;
+      canvas.width = W;
+      canvas.height = H;
+      buf = new Uint8Array(new Array(W * H).fill(0).map(_ => 0))
+    }
+
+    img.addEventListener("load", () => {
+      initBuf(img.width, img.height)
+      paintAndDetect(img)
+    });
+
+    btn.addEventListener('click', () => {
+      canvas.style='transform: scale(-1, 1);';
+      // // Code to run detection via webcam
+      window.navigator.mediaDevices.getUserMedia({ video: true }).then(mediaStream => {
+        video.srcObject = mediaStream;
+
+        video.onloadedmetadata = () => {
+          initBuf(video.videoWidth, video.videoHeight);
+          setTimeout(() => paintAndDetect(video, false), 0)
+        }
+
+      })
+        .catch(e => { video.stop(); alert(e); });
+    })
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+{
+  "name": "zxing-wasm",
+  "version": "0.0.1",
+  "description": "zxing-cpp in wasm",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build-zxing": "cd zxing && ./build.sh",
+    "build-webpack": "webpack",
+    "docs": "npm run build-webpack && cp -r dist/* docs/",
+    "build": "npm run clean && mkdir dist && npm run build-zxing && npm run build-webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/prayerslayer/zxing-wasm.git"
+  },
+  "author": "Nikolaus Piccolotto <prayerslayer@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/prayerslayer/zxing-wasm/issues"
+  },
+  "homepage": "https://github.com/prayerslayer/zxing-wasm#readme",
+  "devDependencies": {
+    "exports-loader": "^0.6.4",
+    "file-loader": "^1.1.6",
+    "uglifyjs-webpack-plugin": "^1.1.5",
+    "wasm-loader": "^1.1.0",
+    "webpack": "^3.10.0"
+  }
+}
