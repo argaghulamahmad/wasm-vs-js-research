@@ -17,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-js/docs/examples/multi-camera/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="158" column="81" lean-forward="true" selection-start-line="158" selection-start-column="81" selection-end-line="158" selection-end-column="81" />
+            <state relative-caret-position="187">
+              <caret line="165" column="85" selection-start-line="165" selection-start-column="83" selection-end-line="165" selection-end-column="85" />
               <folding>
                 <element signature="n#style#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#video#0;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -30,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-wasm/docs/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="151" column="71" lean-forward="true" selection-start-line="151" selection-end-line="152" />
+            <state relative-caret-position="207">
+              <caret line="150" column="77" lean-forward="true" selection-start-line="150" selection-start-column="77" selection-end-line="150" selection-end-column="77" />
             </state>
           </provider>
         </entry>
@@ -69,7 +69,10 @@
       <find>result</find>
       <find>consol</find>
       <find>console.log</find>
+      <find>font-size</find>
+      <find>dt</find>
       <find>alert</find>
+      <find>string</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -88,8 +91,8 @@
         <option value="$PROJECT_DIR$/demo/js-scanner/index.html" />
         <option value="$PROJECT_DIR$/demo/wasm-scanner/index.html" />
         <option value="$PROJECT_DIR$/resources/existing-research/zxing-js/src/browser/BrowserCodeReader.ts" />
-        <option value="$PROJECT_DIR$/resources/existing-research/zxing-wasm/docs/index.html" />
         <option value="$PROJECT_DIR$/resources/existing-research/zxing-js/docs/examples/multi-camera/index.html" />
+        <option value="$PROJECT_DIR$/resources/existing-research/zxing-wasm/docs/index.html" />
       </list>
     </option>
   </component>
@@ -299,11 +302,18 @@
       <option name="project" value="LOCAL" />
       <updated>1562229416941</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Use overlay result instead of alert function">
+      <created>1562229739204</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1562229739204</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14625000" />
+    <option name="totallyTimeSpent" value="14735000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -382,7 +392,8 @@
     <MESSAGE value="Add overlay to both scanner" />
     <MESSAGE value="Add dt as param on result typescript code" />
     <MESSAGE value="Remove unused console.log" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove unused console.log" />
+    <MESSAGE value="Use overlay result instead of alert function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Use overlay result instead of alert function" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/resources/existing-research/instascan/export.js">
@@ -552,21 +563,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-wasm/docs/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="151" column="71" lean-forward="true" selection-start-line="151" selection-end-line="152" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-js/docs/examples/multi-camera/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="158" column="81" lean-forward="true" selection-start-line="158" selection-start-column="81" selection-end-line="158" selection-end-column="81" />
+        <state relative-caret-position="187">
+          <caret line="165" column="85" selection-start-line="165" selection-start-column="83" selection-end-line="165" selection-end-column="85" />
           <folding>
             <element signature="n#style#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#video#0;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-wasm/docs/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="150" column="77" lean-forward="true" selection-start-line="150" selection-start-column="77" selection-end-line="150" selection-end-column="77" />
         </state>
       </provider>
     </entry>

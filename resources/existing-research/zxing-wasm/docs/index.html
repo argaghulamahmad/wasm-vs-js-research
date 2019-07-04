@@ -42,7 +42,7 @@
             transform: translate(-50%, -50%);
             text-align: center;
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 10px;
+            font-size: 20px;
             z-index: 3;
         }
 
@@ -61,7 +61,7 @@
             transform: translate(-50%, -50%);
             text-align: center;
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 10px;
+            font-size: 20px;
             z-index: 3;
         }
 
@@ -148,7 +148,7 @@
         var t1 = performance.now();
         var dt = t1 - t0;
         if (result !== '') {
-          resultStr = 'wasm scanner: ' + result + ', dt:  ' + dt;
+          resultStr = 'wasm scanner: ' + result + ', time to decode:  ' + dt;
           document.querySelector("body > div.overlay-result").innerHTML = resultStr;
         }
         if (!singlePass) {
