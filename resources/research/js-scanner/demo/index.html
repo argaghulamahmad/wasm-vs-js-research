@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>ZXing Javascript Scanner</title>
+</head>
+
+<style>
+    div.overlay {
+        --baseline: 12px;
+        position: fixed;
+        display: block;
+        top: 20%;
+        left: 50%;
+        height: fit-content;
+        min-width: 160px;
+        padding: var(--baseline) calc(var(--baseline) * 2);
+        background: white;
+        border-radius: 20px;
+        color: black;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        z-index: 3;
+    }
+
+    div.overlay-result {
+        --baseline: 12px;
+        position: fixed;
+        display: block;
+        bottom: 20%;
+        left: 50%;
+        height: fit-content;
+        min-width: 160px;
+        padding: var(--baseline) calc(var(--baseline) * 2);
+        background: white;
+        border-radius: 20px;
+        color: black;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        z-index: 3;
+    }
+
+    div.square {
+        position: fixed;
+        display: block;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        min-height: 100%;
+        min-width: 100%;
+        background: #333333;
+        opacity: 0.3;
+        color: black;
+        z-index: 4;
+    }
+
+    div.square-inner {
+        position: fixed;
+        top: 15%;
+        left: 15%;
+        right: 15%;
+        bottom: 15%;
+        min-width: 70%;
+        min-height: 70%;
+        background: rgba(255, 255, 255, 0.5);
+        box-sizing: border-box;
+    }
+</style>
+
+<body>
+
+<div class="overlay">
+    <span>
+        Current FPS:
+    </span>
+</div>
+
+<div class="overlay-result">
+    Empty
+</div>
+
+<main class="wrapper" style="padding-top:2em">
+    <section class="container" id="demo-content">
+        <div>
+            <video id="video" style="
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;">
+            </video>
+        </div>
+
+        <div id="sourceSelectPanel" style="display:none">
+            <select id="sourceSelect" style="max-width:400px; visibility: hidden">
+            </select>
+        </div>
+    </section>
+</main>
+<div class="square">
+    <div class="square-inner"></div>
+</div>
+
+
+<script type="text/javascript" src="../umd/index.min.js"></script>
+<script type="text/javascript">
+  const times = [];
+  let fps;
+
+  function refreshLoop() {
+    window.requestAnimationFrame(() => {
+      const now = performance.now();
+      while (times.length > 0 && times[0] <= now - 1000) {
+        times.shift();
+      }
+      times.push(now);
+      fps = times.length;
+      refreshLoop();
+    });
+  }
+
+  refreshLoop();
+
+  logFps = () => {
+    let fpsStr = 'Current FPS: ' + fps.toString();
+    document.querySelector('body > div.overlay').innerHTML = fpsStr;
+  };
+  window.onload = () => {
+    setInterval(logFps, 1000);
+  };
+
+  window.addEventListener('load', function() {
+    let selectedDeviceId;
+    const codeReader = new ZXing.BrowserMultiFormatReader();
+    codeReader.getVideoInputDevices()
+      .then((videoInputDevices) => {
+        const sourceSelect = document.getElementById('sourceSelect');
+        selectedDeviceId = videoInputDevices[0].deviceId;
+        if (videoInputDevices.length >= 1) {
+          videoInputDevices.forEach((element) => {
+            const sourceOption = document.createElement('option');
+            sourceOption.text = element.label;
+            sourceOption.value = element.deviceId;
+            sourceSelect.appendChild(sourceOption);
+          });
+
+          sourceSelect.onchange = () => {
+            selectedDeviceId = sourceSelect.value;
+          };
+
+          const sourceSelectPanel = document.getElementById('sourceSelectPanel');
+          sourceSelectPanel.style.display = 'block';
+        }
+
+        const start = () => {
+          codeReader.decodeFromInputVideoDeviceContinuously(selectedDeviceId, 'video', (result, err) => {
+            if (result) {
+              resultStr = 'js scanner: ' + result + ', time to decode:  ' + result.dt;
+              document.querySelector("body > div.overlay-result").innerHTML = resultStr;
+            }
+            if (err && !(err instanceof ZXing.NotFoundException)) {
+              console.error(err);
+              document.getElementById('result').textContent = err;
+            }
+          });
+        };
+
+        window.onload(
+          start()
+        );
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  });
+</script>
+
+</body>
+
+</html>
