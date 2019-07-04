@@ -73,6 +73,47 @@
         background: rgba(255, 255, 255, 0.5);
         box-sizing: border-box;
     }
+
+    @keyframes scanning {
+        0% {
+            opacity: 0.5;
+            top: 15%;
+        }
+        25% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0.5;
+            top: 75%;
+        }
+        75% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0.5;
+            top: 15%;
+        }
+    }
+
+    div.scan {
+        position: fixed;
+        top: 15%;
+        left: 15%;
+        right: 15%;
+        bottom: 15%;
+        width: 70%;
+        height: 10%;
+        background: rgba(255, 255, 255, 0);
+        background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(66, 181, 73, 1) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(66, 181, 73, 1)));
+        background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(66, 181, 73, 1) 100%);
+        background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(66, 181, 73, 1) 100%);
+        background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(66, 181, 73, 1) 100%);
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(66, 181, 73, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#42b549', GradientType=0);
+        box-sizing: border-box;
+        animation: scanning 2s ease-in alternate infinite;
+    }
 </style>
 
 <body>
@@ -107,6 +148,7 @@
 </main>
 <div class="square">
     <div class="square-inner"></div>
+    <div class="scan"></div>
 </div>
 
 
@@ -164,7 +206,7 @@
           codeReader.decodeFromInputVideoDeviceContinuously(selectedDeviceId, 'video', (result, err) => {
             if (result) {
               resultStr = 'js scanner: ' + result + ', time to decode:  ' + result.dt;
-              document.querySelector("body > div.overlay-result").innerHTML = resultStr;
+              document.querySelector('body > div.overlay-result').innerHTML = resultStr;
             }
             if (err && !(err instanceof ZXing.NotFoundException)) {
               console.error(err);
