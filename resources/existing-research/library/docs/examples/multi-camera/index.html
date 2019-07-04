@@ -121,6 +121,7 @@
               if (result) {
                 console.log(result)
                 document.getElementById('result').textContent = result.text
+                alert('js scanner: ' + result);
               }
               if (err && !(err instanceof ZXing.NotFoundException)) {
                 console.error(err)

@@ -2,8 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/resources/existing-research/instascan" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/resources/existing-research/library" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/resources/existing-research/zxing-wasm" vcs="Git" />
   </component>
 </project>

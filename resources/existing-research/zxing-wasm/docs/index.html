@@ -83,6 +83,7 @@
             div.textContent = "[Nothing detected]"
           } else {
             div.textContent = result
+            alert('wasm scanner: ' + result);
           }
           if (!singlePass) {
             setTimeout(() => paintAndDetect(src, false), 0)
