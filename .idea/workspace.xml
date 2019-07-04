@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ac03880-5d42-4110-b648-874d3370c04f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/existing-research/zxing-js/docs/examples/multi-camera/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/existing-research/zxing-js/docs/examples/multi-camera/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,7 +15,36 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-js/docs/examples/multi-camera/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="567">
+              <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+              <folding>
+                <element signature="e#1065#1066#0" expanded="true" />
+                <element signature="e#1104#1105#0" expanded="true" />
+                <element signature="e#1134#1135#0" expanded="true" />
+                <element signature="e#1173#1174#0" expanded="true" />
+                <element signature="e#1956#1957#0" expanded="true" />
+                <element signature="e#2023#2024#0" expanded="true" />
+                <element signature="e#2845#2846#0" expanded="true" />
+                <element signature="e#2884#2885#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-js/esm5/browser/BrowserCodeReader.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="604">
+              <caret line="248" column="40" lean-forward="true" selection-start-line="248" selection-start-column="40" selection-end-line="248" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -36,6 +63,9 @@
       <find>zxing</find>
       <find>decodeFromInputVideoDeviceContinuously</find>
       <find>decodeconti</find>
+      <find>define(&quot;ZXing&quot;</find>
+      <find>z</find>
+      <find>define(&quot;zxing</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -52,6 +82,7 @@
         <option value="$PROJECT_DIR$/resources/existing-research/zxing-wasm/docs/index.html" />
         <option value="$PROJECT_DIR$/resources/existing-research/library/docs/examples/multi-camera/index.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/resources/existing-research/zxing-js/docs/examples/multi-camera/index.html" />
       </list>
     </option>
   </component>
@@ -90,15 +121,112 @@
               <item name="wasm-vs-js" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="existing-research" type="462c0819:PsiDirectoryNode" />
-              <item name="library" type="462c0819:PsiDirectoryNode" />
+              <item name="zxing-js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wasm-vs-js" type="b2602c69:ProjectViewProjectNode" />
               <item name="wasm-vs-js" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="existing-research" type="462c0819:PsiDirectoryNode" />
-              <item name="library" type="462c0819:PsiDirectoryNode" />
+              <item name="zxing-js" type="462c0819:PsiDirectoryNode" />
+              <item name=".vscode" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wasm-vs-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wasm-vs-js" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="existing-research" type="462c0819:PsiDirectoryNode" />
+              <item name="zxing-js" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wasm-vs-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wasm-vs-js" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="existing-research" type="462c0819:PsiDirectoryNode" />
+              <item name="zxing-js" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wasm-vs-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wasm-vs-js" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="existing-research" type="462c0819:PsiDirectoryNode" />
+              <item name="zxing-js" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
+              <item name="barcode-image" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wasm-vs-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wasm-vs-js" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="existing-research" type="462c0819:PsiDirectoryNode" />
+              <item name="zxing-js" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
+              <item name="multi-camera" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wasm-vs-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wasm-vs-js" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="existing-research" type="462c0819:PsiDirectoryNode" />
+              <item name="zxing-js" type="462c0819:PsiDirectoryNode" />
+              <item name="esm5" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wasm-vs-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wasm-vs-js" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="existing-research" type="462c0819:PsiDirectoryNode" />
+              <item name="zxing-js" type="462c0819:PsiDirectoryNode" />
+              <item name="esm5" type="462c0819:PsiDirectoryNode" />
+              <item name="browser" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wasm-vs-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wasm-vs-js" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="existing-research" type="462c0819:PsiDirectoryNode" />
+              <item name="zxing-js" type="462c0819:PsiDirectoryNode" />
+              <item name="esm5" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wasm-vs-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wasm-vs-js" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="existing-research" type="462c0819:PsiDirectoryNode" />
+              <item name="zxing-js" type="462c0819:PsiDirectoryNode" />
+              <item name="esm5" type="462c0819:PsiDirectoryNode" />
+              <item name="index.js" type="620a8d5e:NestingTreeNode" />
+            </path>
+            <path>
+              <item name="wasm-vs-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wasm-vs-js" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="existing-research" type="462c0819:PsiDirectoryNode" />
+              <item name="zxing-js" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wasm-vs-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wasm-vs-js" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="existing-research" type="462c0819:PsiDirectoryNode" />
+              <item name="zxing-js" type="462c0819:PsiDirectoryNode" />
+              <item name="umd" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wasm-vs-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wasm-vs-js" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="existing-research" type="462c0819:PsiDirectoryNode" />
+              <item name="zxing-js" type="462c0819:PsiDirectoryNode" />
+              <item name="umd" type="462c0819:PsiDirectoryNode" />
+              <item name="index.min.js" type="620a8d5e:NestingTreeNode" />
             </path>
             <path>
               <item name="wasm-vs-js" type="b2602c69:ProjectViewProjectNode" />
@@ -202,14 +330,29 @@
       <option name="project" value="LOCAL" />
       <updated>1562213456996</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Yarn install existing research js scanner">
+      <created>1562218693345</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1562218693345</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Rename directory to zxing-js">
+      <created>1562218750301</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1562218750301</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7133000" />
+    <option name="totallyTimeSpent" value="7757000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22598253" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -281,7 +424,9 @@
     <MESSAGE value="Alert result" />
     <MESSAGE value="Remove unused html element on&#10;Zxing Javascript Scanner" />
     <MESSAGE value="Benchmarking time elapsed during decode process on wasm scanner" />
-    <option name="LAST_COMMIT_MESSAGE" value="Benchmarking time elapsed during decode process on wasm scanner" />
+    <MESSAGE value="Yarn install existing research js scanner" />
+    <MESSAGE value="Rename directory to zxing-js" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rename directory to zxing-js" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/resources/existing-research/instascan/export.js">
@@ -350,17 +495,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/existing-research/library/src/browser/BrowserCodeReader.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="685" lean-forward="true" selection-start-line="685" selection-end-line="685" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/existing-research/library/docs/resources/blackbox/code128-1/1.png">
+    <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-js/docs/resources/blackbox/code128-1/1.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/existing-research/library/README.md">
+    <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-js/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="-3342">
@@ -370,10 +508,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/existing-research/library/tslint.json">
+    <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-js/tslint.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/existing-research/library/CONTRIBUTING.md">
+    <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-js/CONTRIBUTING.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor />
@@ -381,21 +519,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/existing-research/library/src/index.ts">
+    <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-js/src/index.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="17" column="68" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/existing-research/library/docs/examples/multi-camera/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/existing-research/library/package.json">
+    <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-js/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
@@ -406,6 +537,60 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-js/esm5/index.js.map">
+      <provider editor-type-id="sourcemapFileViewerProvider" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-js/umd/index.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="122" selection-start-column="122" selection-end-column="122" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-js/esm5/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="12" column="64" selection-start-line="12" selection-start-column="64" selection-end-line="12" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-js/src/browser/BrowserCodeReader.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="240" column="5" lean-forward="true" selection-start-line="240" selection-start-column="5" selection-end-line="240" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-js/docs/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-252" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-js/esm5/browser/BrowserCodeReader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="604">
+          <caret line="248" column="40" lean-forward="true" selection-start-line="248" selection-start-column="40" selection-end-line="248" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-js/docs/examples/multi-camera/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+          <folding>
+            <element signature="e#1065#1066#0" expanded="true" />
+            <element signature="e#1104#1105#0" expanded="true" />
+            <element signature="e#1134#1135#0" expanded="true" />
+            <element signature="e#1173#1174#0" expanded="true" />
+            <element signature="e#1956#1957#0" expanded="true" />
+            <element signature="e#2023#2024#0" expanded="true" />
+            <element signature="e#2845#2846#0" expanded="true" />
+            <element signature="e#2884#2885#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
