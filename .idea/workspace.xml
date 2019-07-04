@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ac03880-5d42-4110-b648-874d3370c04f" name="Default Changelist" comment="Remove unused html element on&#10;Zxing Wasm Scanner">
+    <list default="true" id="9ac03880-5d42-4110-b648-874d3370c04f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/existing-research/zxing-wasm/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/existing-research/zxing-wasm/docs/index.html" afterDir="false" />
     </list>
@@ -17,23 +17,48 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-wasm/docs/index.html">
+        <entry file="file://$PROJECT_DIR$/resources/existing-research/library/docs/examples/multi-camera/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+            <state relative-caret-position="724">
+              <caret line="81" column="47" lean-forward="true" selection-start-line="81" selection-start-column="47" selection-end-line="81" selection-end-column="47" />
+              <folding>
+                <element signature="n#style#0;n#video#0;n#div#1;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#select#0;n#div#2;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#2803#2804#0" expanded="true" />
+                <element signature="e#2842#2843#0" expanded="true" />
+                <element signature="e#2872#2873#0" expanded="true" />
+                <element signature="e#2911#2912#0" expanded="true" />
+                <element signature="e#3694#3695#0" expanded="true" />
+                <element signature="e#3761#3762#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/existing-research/library/docs/examples/multi-camera/index.html">
+        <entry file="file://$PROJECT_DIR$/resources/existing-research/library/src/browser/BrowserCodeReader.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="70" column="12" lean-forward="true" selection-start-line="70" selection-start-column="12" selection-end-line="70" selection-end-column="12" />
-              <folding>
-                <element signature="e#2803#2804#0" expanded="true" />
-                <element signature="e#2842#2843#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="208">
+              <caret line="234" column="48" lean-forward="true" selection-start-line="234" selection-start-column="48" selection-end-line="234" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/existing-research/instascan/src/scanner.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="267" column="42" lean-forward="true" selection-start-line="267" selection-start-column="42" selection-end-line="267" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-wasm/docs/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="67" column="11" lean-forward="true" selection-start-line="67" selection-start-column="11" selection-end-line="67" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -44,12 +69,18 @@
     <findStrings>
       <find>nothing detecte</find>
       <find>&lt;p id=&quot;result&quot;&gt;&lt;/p&gt;</find>
-      <find>result</find>
       <find>js scanner</find>
       <find>src</find>
-      <find>zxing</find>
       <find>button</find>
       <find>btn</find>
+      <find>start</find>
+      <find>change video</find>
+      <find>appendChild</find>
+      <find>reset</find>
+      <find>alert</find>
+      <find>result</find>
+      <find>zxing</find>
+      <find>decodeFromInputVideoDeviceContinuously</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -61,10 +92,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/existing-research/library/docs/examples/multi-camera/index.html" />
         <option value="$PROJECT_DIR$/resources/demo/scanner-wasm/index.html" />
         <option value="$PROJECT_DIR$/demo/scanner-wasm/index.html" />
         <option value="$PROJECT_DIR$/resources/existing-research/zxing-wasm/docs/index.html" />
+        <option value="$PROJECT_DIR$/resources/existing-research/library/docs/examples/multi-camera/index.html" />
       </list>
     </option>
   </component>
@@ -227,20 +258,27 @@
       <option name="project" value="LOCAL" />
       <updated>1562209133846</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Remove unused html element on&#10;Zxing Javascript Scanner">
+      <created>1562212200323</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1562212200323</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3427000" />
+    <option name="totallyTimeSpent" value="5311000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.072598256" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="TypeScript" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3299285" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -250,9 +288,10 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="GraphQL" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3299285" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3299285" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="TypeScript" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -260,6 +299,32 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -273,16 +338,14 @@
     <MESSAGE value="Add existing research" />
     <MESSAGE value="Add fps counter" />
     <MESSAGE value="Alert result" />
-    <option name="LAST_COMMIT_MESSAGE" value="Alert result" />
+    <MESSAGE value="Remove unused html element on&#10;Zxing Javascript Scanner" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove unused html element on&#10;Zxing Javascript Scanner" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/resources/existing-research/instascan/export.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/existing-research/instascan/src/camera.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/existing-research/instascan/src/scanner.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/existing-research/instascan/src/zxing.js">
@@ -308,13 +371,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/scanner-js/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="79" column="27" lean-forward="true" selection-start-line="79" selection-start-column="27" selection-end-line="79" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/scanner-js/index.html" />
     <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-wasm/docs/zxing-wasm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -322,24 +379,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/scanner-wasm/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/existing-research/library/docs/examples/multi-camera/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="70" column="12" lean-forward="true" selection-start-line="70" selection-start-column="12" selection-end-line="70" selection-end-column="12" />
-          <folding>
-            <element signature="e#2803#2804#0" expanded="true" />
-            <element signature="e#2842#2843#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/scanner-wasm/index.html" />
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/web-forms.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
@@ -356,8 +396,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-wasm/docs/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        <state relative-caret-position="345">
+          <caret line="67" column="11" lean-forward="true" selection-start-line="67" selection-start-column="11" selection-end-line="67" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/existing-research/instascan/src/scanner.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="267" column="42" lean-forward="true" selection-start-line="267" selection-start-column="42" selection-end-line="267" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/existing-research/library/src/browser/BrowserCodeReader.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="234" column="48" lean-forward="true" selection-start-line="234" selection-start-column="48" selection-end-line="234" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/existing-research/library/docs/examples/multi-camera/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="724">
+          <caret line="81" column="47" lean-forward="true" selection-start-line="81" selection-start-column="47" selection-end-line="81" selection-end-column="47" />
+          <folding>
+            <element signature="n#style#0;n#video#0;n#div#1;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#2;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#2803#2804#0" expanded="true" />
+            <element signature="e#2842#2843#0" expanded="true" />
+            <element signature="e#2872#2873#0" expanded="true" />
+            <element signature="e#2911#2912#0" expanded="true" />
+            <element signature="e#3694#3695#0" expanded="true" />
+            <element signature="e#3761#3762#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -58,10 +58,13 @@
     function paintAndDetect(src, singlePass = true) {
       ctx.drawImage(src, 0, 0, W, H);
       const frame = ctx.getImageData(0, 0, W, H);
+      var t0 = performance.now();
       zxing.read(toGrayScale(frame.data), frame.width, frame.height)
         .then(result => {
+          var t1 = performance.now();
+          var dt = t1 - t0;
           if (result !== "") {
-            alert('wasm scanner: ' + result);
+            alert('wasm scanner: ' + result + ', dt:  ' + dt);
           }
           if (!singlePass) {
             setTimeout(() => paintAndDetect(src, false), 0)
