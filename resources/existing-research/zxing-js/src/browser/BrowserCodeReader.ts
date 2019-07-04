@@ -698,8 +698,7 @@ export class BrowserCodeReader {
         const result = this.decode(element);
         var t1 = performance.now();
         var dt = t1 - t0;
-        alert('js scanner: ' + result + ', dt:  ' + dt);
-
+        result.dt = dt;
         callbackFn(result, null);
         setTimeout(() => loop(), this.timeBetweenScansMillis);
       } catch (e) {

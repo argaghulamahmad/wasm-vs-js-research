@@ -31,8 +31,9 @@ import ResultMetadataType from './ResultMetadataType';
 export default class Result {
 
     private resultMetadata: Map<ResultMetadataType, Object>;
+  dt: number;
 
-    // public constructor(private text: string,
+  // public constructor(private text: string,
     //               Uint8Array rawBytes,
     //               ResultPoconst resultPoints: Int32Array,
     //               BarcodeFormat format) {

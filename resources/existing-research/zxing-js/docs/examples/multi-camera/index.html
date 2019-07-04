@@ -142,6 +142,7 @@
           codeReader.decodeFromInputVideoDeviceContinuously(selectedDeviceId, 'video', (result, err) => {
             if (result) {
               console.log(result);
+              alert('js scanner: ' + result + ', time to decode:  ' + result.dt);
             }
             if (err && !(err instanceof ZXing.NotFoundException)) {
               console.error(err);
