@@ -4,6 +4,7 @@
     <list default="true" id="9ac03880-5d42-4110-b648-874d3370c04f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/existing-research/zxing-js/docs/examples/multi-camera/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/existing-research/zxing-js/docs/examples/multi-camera/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/existing-research/zxing-js/src/browser/BrowserCodeReader.ts" beforeDir="false" afterPath="$PROJECT_DIR$/resources/existing-research/zxing-js/src/browser/BrowserCodeReader.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,12 +17,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-js/docs/examples/multi-camera/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+            <state relative-caret-position="176">
+              <caret line="80" column="36" selection-start-line="80" selection-start-column="36" selection-end-line="80" selection-end-column="36" />
               <folding>
+                <element signature="n#style#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="e#1065#1066#0" expanded="true" />
                 <element signature="e#1104#1105#0" expanded="true" />
                 <element signature="e#1134#1135#0" expanded="true" />
@@ -36,10 +38,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-js/esm5/browser/BrowserCodeReader.js">
+        <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-wasm/docs/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="604">
-              <caret line="248" column="40" lean-forward="true" selection-start-line="248" selection-start-column="40" selection-end-line="248" selection-end-column="40" />
+            <state relative-caret-position="197">
+              <caret line="66" column="35" selection-start-line="66" selection-end-line="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-js/src/browser/BrowserCodeReader.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="239">
+              <caret line="695" column="11" lean-forward="true" selection-start-line="695" selection-start-column="11" selection-end-line="695" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -58,7 +69,6 @@
       <find>change video</find>
       <find>appendChild</find>
       <find>reset</find>
-      <find>alert</find>
       <find>result</find>
       <find>zxing</find>
       <find>decodeFromInputVideoDeviceContinuously</find>
@@ -66,6 +76,9 @@
       <find>define(&quot;ZXing&quot;</find>
       <find>z</find>
       <find>define(&quot;zxing</find>
+      <find>performance</find>
+      <find>to</find>
+      <find>alert</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -82,6 +95,7 @@
         <option value="$PROJECT_DIR$/resources/existing-research/zxing-wasm/docs/index.html" />
         <option value="$PROJECT_DIR$/resources/existing-research/library/docs/examples/multi-camera/index.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/resources/existing-research/zxing-js/src/browser/BrowserCodeReader.ts" />
         <option value="$PROJECT_DIR$/resources/existing-research/zxing-js/docs/examples/multi-camera/index.html" />
       </list>
     </option>
@@ -216,23 +230,6 @@
               <item name="wasm-vs-js" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="existing-research" type="462c0819:PsiDirectoryNode" />
-              <item name="zxing-js" type="462c0819:PsiDirectoryNode" />
-              <item name="umd" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wasm-vs-js" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wasm-vs-js" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="existing-research" type="462c0819:PsiDirectoryNode" />
-              <item name="zxing-js" type="462c0819:PsiDirectoryNode" />
-              <item name="umd" type="462c0819:PsiDirectoryNode" />
-              <item name="index.min.js" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="wasm-vs-js" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wasm-vs-js" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="existing-research" type="462c0819:PsiDirectoryNode" />
               <item name="zxing-wasm" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -344,17 +341,24 @@
       <option name="project" value="LOCAL" />
       <updated>1562218750301</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Use zxing js build result instead from unpkg cdn">
+      <created>1562219371493</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1562219371493</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7757000" />
+    <option name="totallyTimeSpent" value="8126000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22598253" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22598253" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Messages" />
@@ -368,7 +372,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="GraphQL" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3299285" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3299285" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3299285" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -426,7 +430,8 @@
     <MESSAGE value="Benchmarking time elapsed during decode process on wasm scanner" />
     <MESSAGE value="Yarn install existing research js scanner" />
     <MESSAGE value="Rename directory to zxing-js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rename directory to zxing-js" />
+    <MESSAGE value="Use zxing js build result instead from unpkg cdn" />
+    <option name="LAST_COMMIT_MESSAGE" value="Use zxing js build result instead from unpkg cdn" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/resources/existing-research/instascan/export.js">
@@ -485,13 +490,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="267" column="42" lean-forward="true" selection-start-line="267" selection-start-column="42" selection-end-line="267" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-wasm/docs/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="68" column="28" lean-forward="true" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -558,13 +556,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-js/src/browser/BrowserCodeReader.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="240" column="5" lean-forward="true" selection-start-line="240" selection-start-column="5" selection-end-line="240" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-js/docs/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-252" />
@@ -572,16 +563,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-js/esm5/browser/BrowserCodeReader.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="248" column="40" lean-forward="true" selection-start-line="248" selection-start-column="40" selection-end-line="248" selection-end-column="40" />
+        <state relative-caret-position="478">
+          <caret line="291" column="37" lean-forward="true" selection-start-line="291" selection-start-column="37" selection-end-line="291" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-wasm/docs/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="66" column="35" selection-start-line="66" selection-end-line="67" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-js/docs/examples/multi-camera/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+        <state relative-caret-position="176">
+          <caret line="80" column="36" selection-start-line="80" selection-start-column="36" selection-end-line="80" selection-end-column="36" />
           <folding>
+            <element signature="n#style#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="e#1065#1066#0" expanded="true" />
             <element signature="e#1104#1105#0" expanded="true" />
             <element signature="e#1134#1135#0" expanded="true" />
@@ -591,6 +590,13 @@
             <element signature="e#2845#2846#0" expanded="true" />
             <element signature="e#2884#2885#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-js/src/browser/BrowserCodeReader.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="695" column="11" lean-forward="true" selection-start-line="695" selection-start-column="11" selection-end-line="695" selection-end-column="11" />
         </state>
       </provider>
     </entry>

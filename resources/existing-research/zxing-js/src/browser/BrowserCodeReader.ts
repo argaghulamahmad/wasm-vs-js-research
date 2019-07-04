@@ -694,7 +694,12 @@ export class BrowserCodeReader {
       }
 
       try {
+        var t0 = performance.now();
         const result = this.decode(element);
+        var t1 = performance.now();
+        var dt = t1 - t0;
+        alert('js scanner: ' + result + ', dt:  ' + dt);
+
         callbackFn(result, null);
         setTimeout(() => loop(), this.timeBetweenScansMillis);
       } catch (e) {
