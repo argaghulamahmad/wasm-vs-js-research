@@ -2,9 +2,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>zxing-wasm Demo</title>
-  <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
-  <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+  <title>Zxing WASM Scanner</title>
 
   <style>
     video {
@@ -29,11 +27,6 @@
 
 <body>
   <main>
-    <h1>zxing-wasm Demo</h1>
-    <p>Choose a picture with or without QR code:</p>
-    <input type="file" accept="image/*">
-    <button>Start webcam instead</button>
-    <div></div>
     <canvas width="400" height="300"></canvas>
     <img crossorigin="anonymous" alt="">
     <video autoplay></video>
@@ -41,9 +34,6 @@
 
   <script>
     const zxing = window["zxing-wasm"];
-    const btn = document.querySelector('button')
-    const div = document.querySelector("div")
-    const file = document.querySelector("input")
     const video = document.querySelector("video")
     const img = document.querySelector("img")
     const canvas = document.querySelector("canvas");
@@ -51,15 +41,6 @@
     let W = 0;
     let H = 0;
     let buf;
-
-
-    file.addEventListener("change", e => {
-      const f = e.target.files[0]
-      var reader = new FileReader();
-      reader.onload = e2 => img.src = e2.target.result;
-      reader.readAsDataURL(f);
-    });
-
 
     function toGrayScale(frame) {
       // A frame has four channels: red, green, blue, alpha
@@ -79,10 +60,7 @@
       const frame = ctx.getImageData(0, 0, W, H);
       zxing.read(toGrayScale(frame.data), frame.width, frame.height)
         .then(result => {
-          if (result === "") {
-            div.textContent = "[Nothing detected]"
-          } else {
-            div.textContent = result
+          if (result !== "") {
             alert('wasm scanner: ' + result);
           }
           if (!singlePass) {
@@ -104,7 +82,7 @@
       paintAndDetect(img)
     });
 
-    btn.addEventListener('click', () => {
+    window.addEventListener('load', () => {
       canvas.style='transform: scale(-1, 1);';
       // // Code to run detection via webcam
       window.navigator.mediaDevices.getUserMedia({ video: true }).then(mediaStream => {
