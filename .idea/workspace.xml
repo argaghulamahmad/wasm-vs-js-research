@@ -4,7 +4,6 @@
     <list default="true" id="9ac03880-5d42-4110-b648-874d3370c04f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/existing-research/zxing-js/docs/examples/multi-camera/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/existing-research/zxing-js/docs/examples/multi-camera/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/existing-research/zxing-wasm/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/existing-research/zxing-wasm/docs/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,24 +16,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-wasm/docs/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="73" column="9" lean-forward="true" selection-start-line="29" selection-end-line="73" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-js/docs/examples/multi-camera/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="72" lean-forward="true" selection-start-line="5" selection-start-column="72" selection-end-line="5" selection-end-column="72" />
+            <state relative-caret-position="469">
+              <caret line="154" column="8" lean-forward="true" selection-start-line="154" selection-start-column="8" selection-end-line="154" selection-end-column="8" />
               <folding>
                 <element signature="n#style#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#video#0;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-wasm/docs/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="150" column="12" selection-start-line="150" selection-start-column="12" selection-end-line="150" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -53,7 +52,6 @@
       <find>change video</find>
       <find>appendChild</find>
       <find>reset</find>
-      <find>result</find>
       <find>zxing</find>
       <find>decodeFromInputVideoDeviceContinuously</find>
       <find>decodeconti</find>
@@ -61,13 +59,16 @@
       <find>z</find>
       <find>performance</find>
       <find>to</find>
-      <find>alert</find>
       <find>console.l</find>
       <find>script</find>
       <find>style</find>
       <find>define(&quot;zxing</find>
       <find>fps</find>
       <find>div</find>
+      <find>result</find>
+      <find>alert</find>
+      <find>consol</find>
+      <find>console.log</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -83,19 +84,19 @@
         <option value="$PROJECT_DIR$/demo/scanner-wasm/index.html" />
         <option value="$PROJECT_DIR$/resources/existing-research/library/docs/examples/multi-camera/index.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/resources/existing-research/zxing-js/src/browser/BrowserCodeReader.ts" />
         <option value="$PROJECT_DIR$/demo/js-scanner/index.html" />
         <option value="$PROJECT_DIR$/demo/wasm-scanner/index.html" />
         <option value="$PROJECT_DIR$/resources/existing-research/zxing-wasm/docs/index.html" />
+        <option value="$PROJECT_DIR$/resources/existing-research/zxing-js/src/browser/BrowserCodeReader.ts" />
         <option value="$PROJECT_DIR$/resources/existing-research/zxing-js/docs/examples/multi-camera/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="992" />
-    <option name="y" value="24" />
-    <option name="width" value="928" />
-    <option name="height" value="1056" />
+    <option name="x" value="65" />
+    <option name="y" value="-4" />
+    <option name="width" value="1855" />
+    <option name="height" value="1084" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -120,6 +121,30 @@
               <item name="wasm-vs-js" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="existing-research" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wasm-vs-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wasm-vs-js" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="existing-research" type="462c0819:PsiDirectoryNode" />
+              <item name="zxing-js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wasm-vs-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wasm-vs-js" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="existing-research" type="462c0819:PsiDirectoryNode" />
+              <item name="zxing-js" type="462c0819:PsiDirectoryNode" />
+              <item name="esm5" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wasm-vs-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wasm-vs-js" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="existing-research" type="462c0819:PsiDirectoryNode" />
+              <item name="zxing-js" type="462c0819:PsiDirectoryNode" />
+              <item name="esm5" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wasm-vs-js" type="b2602c69:ProjectViewProjectNode" />
@@ -259,11 +284,18 @@
       <option name="project" value="LOCAL" />
       <updated>1562221965657</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Add dt as param on result typescript code">
+      <created>1562229080995</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1562229080995</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13408000" />
+    <option name="totallyTimeSpent" value="14306000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -340,7 +372,8 @@
     <MESSAGE value="Benchmarking time elapsed during decode process on js scanner" />
     <MESSAGE value="Set video as background" />
     <MESSAGE value="Add overlay to both scanner" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add overlay to both scanner" />
+    <MESSAGE value="Add dt as param on result typescript code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add dt as param on result typescript code" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/resources/existing-research/instascan/export.js">
@@ -458,13 +491,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-js/src/browser/BrowserCodeReader.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="597" column="45" lean-forward="true" selection-start-line="597" selection-start-column="45" selection-end-line="597" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-js/docs/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-63" />
@@ -486,17 +512,48 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/wasm-scanner/index.html" />
+    <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-js/esm5/core/Result.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-js/esm5/core/BarcodeFormat.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-js/src/browser/DecodeContinuouslyCallback.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-js/src/browser/BrowserCodeReader.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="693" column="7" lean-forward="true" selection-start-line="693" selection-start-column="7" selection-end-line="693" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-wasm/docs/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="73" column="9" lean-forward="true" selection-start-line="29" selection-end-line="73" selection-end-column="9" />
+        <state relative-caret-position="217">
+          <caret line="150" column="12" selection-start-line="150" selection-start-column="12" selection-end-line="150" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/existing-research/zxing-js/docs/examples/multi-camera/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="72" lean-forward="true" selection-start-line="5" selection-start-column="72" selection-end-line="5" selection-end-column="72" />
+        <state relative-caret-position="469">
+          <caret line="154" column="8" lean-forward="true" selection-start-line="154" selection-start-column="8" selection-end-line="154" selection-end-column="8" />
           <folding>
             <element signature="n#style#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#video#0;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
