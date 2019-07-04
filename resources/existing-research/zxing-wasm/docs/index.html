@@ -43,8 +43,36 @@
             text-align: center;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 10px;
-            z-index: 2;
+            z-index: 3;
         }
+
+        div.square {
+            position: fixed;
+            display: block;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            min-height: 100%;
+            min-width: 100%;
+            background: #333333;
+            opacity: 0.3;
+            color: black;
+            z-index: 4;
+        }
+
+        div.square-inner {
+            position: fixed;
+            top: 15%;
+            left: 15%;
+            right: 15%;
+            bottom: 15%;
+            min-width: 70%;
+            min-height: 70%;
+            background: rgba(255, 255, 255, 0.5);
+            box-sizing: border-box;
+        }
+
     </style>
     <script src="./zxing-wasm.js"></script>
 </head>
@@ -54,6 +82,10 @@
     <span>
         Current FPS:
     </span>
+</div>
+
+<div class="square">
+    <div class="square-inner"></div>
 </div>
 <main>
     <canvas width="400" height="300"></canvas>
