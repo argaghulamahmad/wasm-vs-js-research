@@ -22,10 +22,10 @@
   },
   "homepage": "https://github.com/prayerslayer/zxing-wasm#readme",
   "devDependencies": {
-    "exports-loader": "^0.6.4",
-    "file-loader": "^1.1.6",
+    "exports-loader": "^4.0.0",
+    "file-loader": "^6.2.0",
     "uglifyjs-webpack-plugin": "^1.1.5",
     "wasm-loader": "^1.1.0",
-    "webpack": "^3.10.0"
+    "webpack": "^5.75.0"
   }
 }
