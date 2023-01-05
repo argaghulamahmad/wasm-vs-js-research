@@ -26,6 +26,6 @@
     "file-loader": "^1.1.6",
     "uglifyjs-webpack-plugin": "^1.1.5",
     "wasm-loader": "^1.1.0",
-    "webpack": "^3.10.0"
+    "webpack": "^5.75.0"
   }
 }
